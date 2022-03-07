@@ -1,0 +1,42 @@
+article {padding-left: 40%}
+div.blank {height: 175%}
+
+header, footer
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+footer
+{
+	width: 40%;
+}
+
+footer div.text
+{
+	-skrollr-animation-name: ftr;
+}
+
+header
+{
+	z-index: 1;
+	-skrollr-animation-name: hdr;
+}
+
+@-skrollr-keyframes hdr
+{
+	anchor-target {.reveal}
+	0 {width[swing]: 100%}
+	100p {width[swing]: 40%}
+	bottom-bottom {opacity[swing]: 1}
+	center-bottom {opacity[swing]: 0; left: 0%;}
+	-1-center-bottom {left: -40%}
+}
+
+@-skrollr-keyframes ftr
+{
+	anchor-target {.reveal}
+	center-bottom {opacity[cubic]: 0}
+	top-bottom {opacity[cubic]: 1}
+}

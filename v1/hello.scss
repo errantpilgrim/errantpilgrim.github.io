@@ -1,0 +1,494 @@
+@font-face
+{
+    font-family: 'sklr';
+    src: url('/fonts/skolar_regular.eot');
+    src: url('/fonts/skolar_regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/skolar_regular.woff') format('woff'),
+         url('/fonts/skolar_regular.ttf') format('truetype'),
+         url('/fonts/skolar_regular.svg#skolar_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'sklr';
+    src: url('/fonts/skolar_semibold.eot');
+    src: url('/fonts/skolar_semibold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/skolar_semibold.woff') format('woff'),
+         url('/fonts/skolar_semibold.ttf') format('truetype'),
+         url('/fonts/skolar_semibold.svg#skolar_semibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$cover: #242424;
+$page: white;
+$pagedark: #484848;
+$line: silver;
+$text: #484848;
+$textlight: white;
+$mobile: 580px;
+$lores: 1300px;
+$med: 1400px;
+$wide: 1700px;
+
+*
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: text;
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+:focus {outline: none}
+::-moz-focus-inner {border: 0}
+
+html
+{
+	overflow-y: scroll;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+html, body
+{
+	height: 100%;
+	background-color: $cover;
+}
+
+html.skrollr-mobile
+{
+	height: auto;
+	body {height: auto}
+	#loader {position: fixed}
+}
+
+body
+{
+	font-family: sklr;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 22px;
+	line-height: 1.5;
+	position: relative;
+
+	&.loading
+	{
+		overflow: hidden;
+
+		#loader
+		{
+			pointer-events: all;
+			opacity: 1;
+		}
+
+		span.star
+		{
+			-webkit-animation: pulse 1s ease-in-out infinite alternate;
+			animation: pulse 1s ease-in-out infinite alternate;
+		}
+	}
+
+	@media screen and (max-width: $lores)
+	{
+		font-size: 20px;
+	}
+
+	@media screen and (max-width: $mobile)
+	{
+		font-size: 18px;
+	}
+
+	@media screen and (min-width: $wide)
+	{
+		font-size: 24px;
+	}
+}
+
+div.blank {background-color: $page}
+
+header, footer
+{
+	background: $cover;
+	color: $textlight;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	&:before
+	{
+		content: "";
+		display: block;
+		border: 3px double $line;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		right: 7px;
+		bottom: 7px;
+	}
+
+	div.text
+	{
+		position: relative;
+		top: 50%;
+		-webkit-transform: translate3d(0,-50%,0);
+		transform: translate3d(0,-50%,0);
+	}
+}
+	
+header
+{
+	cursor: s-resize;
+
+	h1, h2
+	{
+		font-weight: normal;
+		text-align: center;
+	}
+
+	h1
+	{
+		font-size: 16px;
+		line-height: 1;
+		background-size: 18px;
+		position: relative;
+
+		b {font-size: 17px}
+		span
+		{
+			display: inline-block;
+			width: 20px;
+		}
+	}
+
+	h2
+	{
+		font-size: 10px;
+		line-height: 1;
+		margin-top: 0.5em;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		span {letter-spacing: normal}
+	}
+
+	div.text { height: 34px; }
+}
+
+footer
+{
+	font-size: 16px;
+	cursor: n-resize;
+
+	a
+	{
+		color: $textlight;
+		text-decoration: none;
+		-webkit-transition: opacity 250ms ease-out;
+		transition: opacity 250ms ease-out;
+
+		&:hover {opacity: 0.5}
+	}
+
+	div.text {height: 26px}
+}
+
+article
+{
+	background-color: $page;
+	padding-bottom: 4em;
+	overflow: hidden;
+}
+
+section
+{
+	padding: 4em 1em;
+
+	@media screen and (max-width: $med)
+	{
+		padding: 3em 1em;
+	}
+
+	@media screen and (max-width: $lores)
+	{
+		padding: 2.5em 1em;
+	}
+
+	*:first-child {margin-top: 0}
+	*:last-child {margin-bottom: 0}
+
+	&:nth-of-type(odd)
+	{
+		background-color: $page;
+		color: $text;
+
+		> img, > figure
+		{
+			display: block;
+			margin: 0 auto 2em;
+		}
+
+		p
+		{
+			max-width: 29em;
+			margin: 1em auto;
+		}
+	}
+
+	&:nth-of-type(even)
+	{
+		background-color: $pagedark;
+		color: $textlight;
+		text-align: center;
+		padding: 3em 1em 2em;
+
+		p
+		{
+			font-size: 16px;
+			margin-bottom: 3em;
+			padding: 0 2em;
+
+			@media screen and (max-width: $lores)
+			{
+				font-size: 14px;
+			}
+		}
+
+		> img
+		{
+			width: 100%;
+			max-width: 800px;
+			position: relative;
+		}
+
+		> img, &.mobile div figure
+		{
+			margin-bottom: 1em;
+		}
+
+		&.mobile
+		{
+			padding-left: 0;
+			padding-right: 0;
+
+			div {display: inline-block}
+
+			figure
+		    {
+		    	display: inline-block;
+		        width: 300px;
+		        height: 600px;
+		        background-image: url(images/wirephone.png);
+		        background-size: 100%;
+		        background-repeat: no-repeat;
+		        padding-top: 87px;
+		        display: inline-block;
+		        position: relative;
+		     
+		        &.point:after
+			    {
+			        content:"";
+			        width: 180px;
+			        height: 145px;
+			        display: block;
+			        background-image: url(images/wirehand.png);
+			        background-size: 100%;
+			        background-repeat: no-repeat;
+			        position: absolute;
+			        left: 144px;
+			        top: 282px;
+			    }
+		    }
+		}
+	}
+}
+
+#phl
+{
+	width: 220px;
+	height: 220px;
+	border-radius: 110px;
+	box-shadow: inset 0 2px 6px rgba(0,0,0,0.75);
+	background-color: red;
+	background: transparent url(images/phl.png) no-repeat 0 0;
+	background-size: 320px 220px;
+}
+
+#degree
+{
+	width: 260px;
+	margin: 2em auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+
+	> span
+	{
+		display: block;
+		line-height: 1;
+
+		&:nth-child(1)
+		{
+			font-size: 14px;
+			letter-spacing: 4px;
+			> span {letter-spacing: 1px}
+		}
+		&:nth-child(2)
+		{
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: 2px;
+			display: table;
+			width: 100%;
+			position: relative;
+			margin: 2px 0 1px;
+
+			&:before, &:after
+			{
+				content: "";
+				display: table-cell;
+				width: 96px;
+				border-top: 1px solid $line;
+				position: absolute;
+				top: 50%;
+			}
+
+			&:before {left: 8px}
+			&:after {right: 8px}
+		}
+		&:nth-child(3)
+		{
+			font-size: 18px;
+			letter-spacing: 1px;
+			> span {letter-spacing: normal}
+		}
+		&:nth-child(4)
+		{
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: 3px;
+			margin: 2px 0 1px;
+			> span {letter-spacing: 1px}
+		}
+		&:nth-child(5)
+		{
+			font-size: 22px;
+			line-height: 20px;
+			letter-spacing: 1px;
+			> span {letter-spacing: normal}
+		}
+		&:nth-child(6)
+		{
+			font-size: 28px;
+			letter-spacing: 4px;
+			> span {letter-spacing: normal}
+		}
+	}
+}
+
+#loader
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $cover;
+	cursor: default;
+	pointer-events: none;
+	opacity: 0;
+	-webkit-transition: opacity 2s ease-out;
+	transition: opacity 2s ease-out;
+}
+
+span.star
+{
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin-top: -6px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-4px,-5px,0);
+	transform: translate3d(-4px,-5px,0);
+	overflow: hidden;
+
+	span
+	{
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		border: 1px solid $textlight;
+		position: absolute;
+
+		&:nth-child(1)
+		{
+			top: -5px;
+			left: -5px;
+		}
+		&:nth-child(2)
+		{
+			top: -5px;
+			right: -5px;
+		}
+		&:nth-child(3)
+		{
+			bottom: -5px;
+			right: -5px;
+		}
+		&:nth-child(4)
+		{
+			bottom: -5px;
+			left: -5px;
+		}
+	}
+}
+
+#noscript
+{
+	color: $textlight;
+	font-family: monospace;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	margin-top: 1.5em;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+@-webkit-keyframes pulse
+{
+	from { opacity: 0.1; }
+	to { opacity: 1; }
+}
+
+@keyframes pulse
+{
+	from { opacity: 0.1; }
+	to { opacity: 1; }
+}
+
+@-webkit-keyframes tide
+{
+	from { background-position: 0px 0px; }
+	to { background-position: -600px 0px; }
+}
+
+@keyframes tide
+{
+	from { background-position: 0px 0px; }
+	to { background-position: -600px 0px; }
+}
