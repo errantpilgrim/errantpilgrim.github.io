@@ -1,0 +1,9 @@
+header {cursor: url(images/s-resize.png), url(images/s-resize.cur), s-resize}
+footer {cursor: url(images/n-resize.png), url(images/n-resize.cur), n-resize}
+
+div.text {margin-top: 3px}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+	div.text {margin-top: 0}
+}
