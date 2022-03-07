@@ -1,0 +1,489 @@
+@font-face {
+  font-family: 'medium';
+  src:  url('medium.woff2') format('woff2'),
+        url('medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'mediumitalic';
+  src:  url('mediumitalic.woff2') format('woff2'),
+        url('mediumitalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'bold';
+  src:  url('bold.woff2') format('woff2'),
+        url('bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'bolditalic';
+  src:  url('bolditalic.woff2') format('woff2'),
+        url('bolditalic.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  background-color: white;
+  height: 100%;
+}
+
+body {
+  background: #2E3233;
+}
+
+header {
+  background-image: url(v2poster.jpg);
+  width: 100%;
+  padding: 18.75% 0;
+  height: 0;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+header::after {
+  content: '';
+  background-image: url(scan.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -12px;
+  left: 0;
+  background-size: 4px;
+  background-repeat: repeat;
+  opacity: 0.1;
+}
+
+header video {
+  width: 100%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+
+#hv2
+{
+  -webkit-filter: hue-rotate(-30deg);
+}
+
+h1 {
+  background-image: url(vibes.png);
+  background-size: 100%;
+  width: 20%;
+  height: 0;
+  padding: 10% 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  color: rgba(0,0,0,0);
+  background-color: rgba();
+}
+
+#buttons {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+a.button {
+  font-family: 'bolditalic';
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 40px;
+  text-decoration: none;
+  height: 40px;
+  border: 1px solid #FF7F95;
+  width: 240px;
+  border-radius: 4px;
+  background: #FF7F95;
+  color: white;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  transition: color 100ms ease-in;
+  z-index: 2;
+  text-align: center;
+}
+
+a.button:hover {
+  color: #2E3233;  
+}
+
+#watch {
+  margin-top: 10px;
+}
+
+#footerlink {
+  margin-top: 30px;
+  background: white;
+  color: #FF7F95;
+}
+
+#footerlink:hover {
+  color: #2E3233;
+}
+
+article {
+  padding: 20px 0 0;
+}
+
+article::before {
+  content: '';
+  background-image: url(darkwave.png);
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  height: 6px;
+  background-size: 30px 6px;
+  display: block;
+  background-position: 0;
+  animation: wave 1s linear infinite;
+  z-index: 1;
+}
+
+section {
+  width: 640px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+
+div.content {
+  width: 300px;
+  margin: 0 10px;
+  color: white;
+}
+
+#demo div.content {
+  width: 320px;
+}
+
+div.content h2 {
+  font-family: 'bolditalic';
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 40px 0 20px;
+}
+
+div.content p {
+  font-family: 'medium';
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+  margin: 20px auto;
+}
+
+em {
+  font-style: normal;
+  font-family: 'mediumitalic';
+}
+
+div.content p.b {
+  font-family: 'bold';
+  text-align: left;
+}
+
+div.content p.center {
+  text-align: center;
+  margin: 0;
+}
+
+div.content p.b em {
+  font-family: 'bolditalic';
+}
+
+section.center {
+  display: block;
+  text-align: center;
+  margin-top: 140px;
+}
+
+section.center, section.center div.content {
+  width: 620px;
+}
+
+section.center div.content {
+  margin: 0 auto;
+}
+
+section.center div.content p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section.center h2 {
+  text-align: center;
+}
+
+#device1 {
+  width: 305px;
+  height: 385px;
+  background-image: url(device1.png);
+  background-size: 100%;
+}
+
+#card1 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 5px;
+  top: 95px;
+  background-image: url(card1.png);
+  background-size: 100%;
+  transform: rotate(0deg);
+}
+
+#card2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 5px;
+  top: 85px;
+  background-image: url(card2.png);
+  background-size: 100%;
+}
+
+#ok {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background-image: url(ok.png);
+  background-size: 100%;
+  transform: scale(0.5) rotate(0deg);
+  opacity: 0;
+}
+
+#device2 {
+  width: 305px;
+  height: 395px;
+  background-image: url(device2.png);
+  background-size: 100%;
+}
+
+#match1 {
+  width: 200px;
+  height: 165px;
+  background-image: url(match1.png);
+  background-size: 100%;
+  position: absolute;
+  top: 25px;
+  left: 5px;
+}
+
+#match2 {
+  width: 200px;
+  height: 165px;
+  background-image: url(match2.png);
+  background-size: 100%;
+  position: absolute;
+  top: 206px;
+  left: 100px;
+}
+
+#question {
+  width: 200px;
+  height: 50px;
+  background-image: url(question.png);
+  background-size: 100%;
+  position: absolute;
+  top: 167px;
+  left: 52px;
+}
+
+#matchtext {
+  width: 400px;
+  height: 330px;
+  background-image: url(matchtext.png);
+  background-size: 100%;
+  position: absolute;
+  top: -57px;
+  left: -50px;
+  transform: scale(0.75);
+  opacity: 0;
+}
+
+#device3 {
+  width: 380px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#vidwrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+
+#vidwrapper::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  background-image: url(device3mask.png);
+  background-size: 100%;
+  pointer-events: none;
+  -webkit-transform-style: preserve-3d;
+}
+
+#vidwrapper video {
+  position: absolute;
+  top: -11px;
+  left: -154px;
+  -webkit-transform-style: preserve-3d;
+  width: 672px;
+  height: 378px;
+  object-fit: cover;
+}
+
+#play {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  bottom: 11px;
+  left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  background-position: 50% 46%;
+  background-size: 80px;
+  background-image: url(play.png);
+  background-repeat: no-repeat;
+  transition: opacity 100ms ease-in;
+}
+
+#play:hover {
+  background-color: rgba(0,0,0,0.25);
+  opacity: 1;
+}
+
+#play.playing {
+  opacity: 0;
+}
+
+#play.playing:hover {
+  background-color: rgba(0,0,0,0);
+  background-image: url(pause.png);
+  opacity: 1;
+}
+
+footer {
+  background: white;
+  height: 220px;
+  margin-top: -30px;
+  padding-top: 30px;
+  z-index: 2;
+  -webkit-transform-style: preserve-3d;
+}
+
+footer::after {
+  content: '';
+  background-image: url(lightwave.png);
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  height: 6px;
+  background-size: 30px 6px;
+  display: block;
+  background-position: 0;
+  animation: wave 1s linear infinite;
+  -webkit-transform-style: preserve-3d;
+}
+
+footer p {
+  text-align: center;
+  font-family: 'medium';
+  color: #A1B0B3;
+  font-size: 10px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+#appicon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-image: url(appicon.png);
+  background-size: 100%;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -60px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  #device1, #device2 {
+    margin: 0 auto;
+  }
+  div.content {
+    margin: 0 auto 40px;
+  }
+  h2 {
+    text-align: center;
+  }
+  section {
+    justify-content: center;
+    width: auto;
+    margin-top: 80px;
+  }
+  #stack {
+    flex-direction: column-reverse;
+  }
+  #match {
+    flex-direction: column;
+  }
+  section.center, section.center div.content {
+    width: 304px;
+  }
+  #device3 {
+    width: 304px;
+    height: 320px;
+  }
+  #vidwrapper video {
+    position: absolute;
+    left: -125px;
+    -webkit-transform-style: preserve-3d;
+    width: 538px;
+    height: 302px;
+    object-fit: cover;
+  }
+  #vidwrapper::after {
+    background-image: url(device3mask-small.png);
+  }
+  footer {
+    height: 260px;
+  }
+}

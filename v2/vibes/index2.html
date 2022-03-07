@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	    <title>Vibes</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+	    <link rel="stylesheet" type="text/css" href="vibes.css?v=2">
+	    <link rel="icon" href="favicon.png">
+	    <link rel="apple-touch-icon" href="touchicon.png">
+	</head>
+	<body id="skrollr-body">
+		<header>
+			<video id="hv2" playsinline loop="loop" autoplay="autoplay">
+				<source src="v3.mp4" type="video/mp4">
+			</video>
+			<h1>Vibes</h1>
+		</header>
+		<article>
+			<div id="buttons">
+				<button id="signup">Download on the App Store</button>
+				<button id="watch">Watch the video</button>
+			</div>
+			<section id="intro" class="center">
+				<div class="content">
+					<h2>You deserve a better dating app,<br>
+					so we made one for you</h2>
+					<p>We see you. Groaning over that inbox, agonizing over that profile, throwing your phone in the toilet because <em>love is dead</em> and every dating app out there is an impersonal, exhausting slog where it feels like a full-time job just to get from the first tedious text to the next disappointing date.</p>
+					<p class="b center">This was supposed to be <em>fun</em>, right?</p>
+					<p class="b center">Let's turn those sad vibes into rad vibes.</p>
+			</section>
+			<section id="stack">
+				<div id="device1">
+					<div id="card2" data-anchor-target="#device1" data-300-top-top="opacity:0;" data-200-top-center="opacity:0.5;"></div>
+					<div id="card1" data-anchor-target="#device1" data-300-top-top="left:5px; top:95px; transform:rotate(0deg);" data-200-top-center="left:92px; top:100px; transform:rotate(5deg);">
+						<div id="ok" data-anchor-target="#device1" data-200-top-top="transform:scale(0.5) rotate(0deg); opacity:0;" data-200-top-center="transform:scale(1) rotate(-10deg); opacity:1;"></div>
+					</div>
+				</div>
+				<div class="content">
+					<h2>...OK but like,<br>how does it work?</h2>
+					<p class="b">Like Tinder, but with questions instead of bios and video messaging instead of text.</p>
+					<p>Your question is a built-in conversation starter. Choose one you like or get creative and write your own. No more cheesy pickup lines, no more bland <em>“hey, how r u?”</em> openers, no more stressing over what to say first. You and your match have something to talk about right off the bat, every time. You’re welcome.</p>
+				</div>
+			</section>
+			<section id="match">
+				<div class="content">
+					<h2>More chemistry<br>than Walter White</h2>
+					<p>Messages are comfortably pixelated, so you won’t feel self-conscious (let's be real, we don't all wake up like Beyoncé) but can easily read each other's facial expressions and get a sense of how you, um... what's the word? <em>Vibe.</em></p>
+					<p>After the first exchange, you're free to toggle pixelation on &amp; off for your own messages whenever. So, no, you won't get catfished. But you <em>will</em> find out if there's chemistry.</p>
+					<p class="b">Get you an app that can do both.</p>
+				</div>
+				<div id="device2">
+					<div id="match1" data-anchor-target="#device2" data-bottom-center="left:5px;" data-center-center="left:52px;"></div>
+					<div id="match2" data-anchor-target="#device2" data-bottom-center="left:100px;" data-center-center="left:52px;"></div>
+					<div id="matchtext" data-anchor-target="#device2" data-bottom-center="transform:scale(0.75); opacity:0;" data-center-center="transform:scale(0.5); opacity:1;"></div>
+					<div id="question"></div>
+				</div>
+			</section>
+			<section id="demo" class="center">
+				<div class="content">
+					<h2>Feel the vibes</h2>
+					<p>TL;DR we just saved you from 69 million bad dates with people who have the text game of a god and the IRL personality of a wet graham cracker. Bless.</p>
+				</div>
+				<div id="device3">
+					<div id="vidwrapper">
+						<video id="video" playsinline poster="poster.jpg">
+							<source src="vibes.mp4" type="video/mp4">
+						</video>
+						<div id="play"></div>
+					</div>
+				</div>
+			</section>
+		</article>
+		<footer>
+			<div id="appicon"></div>
+			<p>Available now on iOS</p>
+			<button id="jobs">Download on the App Store</button>
+		</footer>
+		<div id="overlay">
+			<div id="close"></div>
+			<form id="waitlist">
+				<input type="text" id="name" autocomplete="false" placeholder="name"></input>
+				<input type="number" min="0" autocomplete="false" inputmode="numeric" pattern="[0-9]*" placeholder="phone" id="phone">
+				<input type="text" id="gender" autocomplete="false" placeholder="gender">
+				<button id="submit">sign up</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="skrollr.min.js"></script>
+		<script type="text/javascript">
+			var s = skrollr.init();
+			var page = document.getElementById('skrollr-body');
+			var overlay = document.getElementById('overlay');
+			var close = document.getElementById('close');
+			var signup = document.getElementById('signup');
+			var submit = document.getElementById('submit');
+			var watch = document.getElementById('watch');
+			var video = document.getElementById('video');
+			var play = document.getElementById('play');
+			var jobs = document.getElementById('jobs');
+			signup.addEventListener('click', function() {
+				page.className = 'hide';
+				overlay.className = 'show';
+			});
+			close.addEventListener('click', function() {
+				page.className = '';
+				overlay.className = '';
+			});
+			submit.addEventListener('click', function() {
+				page.className = '';
+				overlay.className = '';
+			});
+			watch.addEventListener('click', function() {
+				s.animateTo(s.relativeToAbsolute(video)-180, {duration: 500, easing: 'swing'});
+			});
+			play.addEventListener('click', function() {
+				if (video.paused == true) {
+					video.play();
+					play.className = 'playing';
+				} else {
+					video.pause();
+					play.className = 'paused';
+				}
+			});
+			video.addEventListener('ended', function() {
+				play.className = 'paused';
+			});
+			jobs.addEventListener('click', function() {
+				window.open('https://angel.co/realtalk-3/jobs/144348-software-engineer', '_blank');
+			});
+		</script>
+	</body>
+</html>
