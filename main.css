@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;700&display=swap');
 
 * {
   margin: 0;
@@ -20,7 +20,7 @@
 body
 {
 	font-family: 'IBM Plex Mono', 'SF Mono', ui-monospace, monospace;
-	font-weight: 400;
+	font-weight: 200;
 	background-color: #250040;
 	color: white;
 	font-size: 15px;
