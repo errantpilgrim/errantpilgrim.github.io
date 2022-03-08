@@ -227,7 +227,7 @@ section {
     line-height: 1; }
     #degree > span:nth-child(1) {
       font-size: 14px;
-      letter-spacing: 4px; }
+      letter-spacing: 5px; }
       #degree > span:nth-child(1) > span {
         letter-spacing: 1px; }
     #degree > span:nth-child(2) {
