@@ -23,8 +23,6 @@ body
 	font-weight: 200;
 	background-color: #250040;
 	color: white;
-	font-size: 15px;
-	line-height: 20px;
 }
 
 a { color: inherit; }
@@ -39,7 +37,7 @@ p { padding: 10px 0; }
 article
 {
 	width: 800px;
-	padding: 160px 0;
+	padding: 160px 40px;
 	margin: 0 auto;
 }
 
@@ -48,15 +46,14 @@ h1
 	text-transform: uppercase;
 	font-size: 80px;
 	line-height: 80px;
-	letter-spacing: 5.7px;
 }
 
 h2
 {
 	text-transform: uppercase;
-	font-size: 30px;
-	line-height: 40px;
-	letter-spacing: 1.4px;
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: 5.4px;
 }
 
 section
@@ -65,24 +62,37 @@ section
 	justify-content: space-between;
 	padding: 160px 0 60px;
 }
+section > div { flex: 0 1 auto; }
+figcaption { padding: 30px 60px 0 0; }
 
-section > div
+p
 {
-	flex: 0 1 auto;
+	font-size: 14px;
+	line-height: 20px;
 }
 
-figcaption
+figcaption p
 {
-	text-align: right;
 	font-size: 12px;
 	line-height: 20px;
-	padding: 30px 60px 0 0;
+	text-align: right;
 }
 
 footer p
 {
-	line-height: 30px;
+	font-size: 16px;
+	line-height: 25px;
 	text-align: justify;
+}
+
+#ep
+{
+	width: 80px;
+	height: 80px;
+	background-image: url('ep.png');
+	background-position: center;
+	background-size: 80px;
+	margin: 0 0 40px;
 }
 
 #stvn
@@ -94,5 +104,5 @@ footer p
 	background-size: auto 120px;
 	border-radius: 120px;
 	border: 2px solid white;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
