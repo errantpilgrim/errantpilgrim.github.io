@@ -17,14 +17,6 @@
 .c1 { color: #00FFD4; }
 .c2 { color: #FFAA00; }
 
-body
-{
-	font-family: 'IBM Plex Mono', ui-monospace, monospace;
-	font-weight: 200;
-	background-color: #250040;
-	color: white;
-}
-
 a { color: inherit; }
 a:hover { text-decoration: none; }
 a, b, .bold, h1 { font-weight: 700; }
@@ -33,6 +25,14 @@ h1, h2 { text-align: center; }
 h1 span, h2 span { letter-spacing: 0; }
 div.text { padding-top: 10px; }
 p { padding: 10px 0; }
+
+body
+{
+	font-family: 'IBM Plex Mono', ui-monospace, monospace;
+	font-weight: 200;
+	background-color: #250040;
+	color: white;
+}
 
 article
 {
