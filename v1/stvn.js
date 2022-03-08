@@ -4,10 +4,6 @@ if (navigator.appVersion.indexOf('Windows') != -1)
 	if (window.chrome) document.write('<link rel="stylesheet" type="text/css" href="/directwrite.css">');
 }
 
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-40563644-2']);
-_gaq.push(['_trackPageview']);
-
 (function()
 {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
