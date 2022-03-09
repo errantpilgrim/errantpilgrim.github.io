@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 24px;
   line-height: 40px;
 }
 
@@ -212,6 +212,7 @@ blockquote p {
   line-height: 24px;
   max-width: 640px;
   margin-bottom: 20px;
+  font-style: italic;
 }
 
 blockquote .attr * {
@@ -370,7 +371,7 @@ blockquote a {
 }
 
 .gallery p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .gallery a {
@@ -388,9 +389,13 @@ blockquote a {
 }
 
 .gallery > div {
-  max-width: 374px;
-  margin: 0 auto;
+  border: 10px solid black;
+  border-radius: 10px;
+  background-color: black;
+  max-width: 395px;
+  margin: 20px auto;
 }
+.gallery > div.video { max-width:394px; }
 
 .gallery img {
   width: 100%;
