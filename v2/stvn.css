@@ -218,7 +218,6 @@ blockquote p {
 blockquote .attr * {
   display: block;
   text-align: center;
-  width: 80px;
   margin: 0 auto;
 }
 
